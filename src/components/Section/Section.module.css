@@ -13,6 +13,7 @@
 }
 .section .btn-group{
   margin: 0 0 30px 0;
+  display: flex;
 }
 .down-arrow{
   margin:  0 0 20px 0;

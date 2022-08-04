@@ -1,8 +1,6 @@
 import React from 'react'
 import style from './SectionInfo.module.css'
 const SectionInfo = props => {
-  console.log(props.children)
-
   return (
     <div className={style['info-container']}>
       <h1 className={style.header}>{props.title}</h1>

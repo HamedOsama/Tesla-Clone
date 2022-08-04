@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+@media (max-width : 1198px) {
+  .menu.middle__menu {
+    display: none;
+  }
+}
+
+.menu li {
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  transition: var(--transition);
+}
+
+.menu li:hover {
+  background-color: #e4e4e457;
+}
+
+.menu li a {
+  margin: 0 0.5rem;
+  font-weight: 600;
+  color: var(--black-color);
+  cursor: pointer;
+}
