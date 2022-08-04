@@ -10,6 +10,7 @@ function Home() {
         linkDes="Touchless Delivery"
         leftButton="Custom Order"
         rightButton="Existing Inventory"
+        first={true}
       />
       <Section title="Model Y"
         description="Order online for "

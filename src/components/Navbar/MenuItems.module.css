@@ -17,6 +17,7 @@
 
 .menu li:hover {
   background-color: #e4e4e457;
+  background-color: rgba(0,0,0,.05);
 }
 
 .menu li a {

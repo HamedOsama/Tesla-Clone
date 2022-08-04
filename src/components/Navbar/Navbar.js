@@ -5,10 +5,10 @@ import MenuItems from './MenuItems'
 import RightMenu from './RightMenu'
 const Navbar = () => {
   return (
-    <div className={style.header}>
-      <div className="logo">
-        {/* <img src={logo} alt="logo" /> */}
-        <img src='./images/logo.svg' alt="logo" />
+    <div className={style.navbar}>
+      <div className={style.logo}>
+        <img src={logo} alt="logo" />
+        {/* <img src='./images/logo.svg' alt="logo" /> */}
       </div>
       <MenuItems />
       <RightMenu />

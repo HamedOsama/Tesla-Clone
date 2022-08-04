@@ -10,14 +10,21 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  scroll-snap-align: start;
+  -moz-scroll-snap-stop:always;
+  -webkit-scroll-snap-stop:always;
+  scroll-snap-stop: always;
 }
 .section .buttons{
   width: 100%;
 }
 .section .btn-group{
-  margin: 0 0 30px 0;
+  margin: 0 0 106px 0;
   display: flex;
   justify-content: center;
+}
+.section .btn-group.first__section{
+  margin: 0 0 50px 0;
 }
 @media (max-width : 578px) {
   .section .btn-group{
@@ -28,9 +35,10 @@
   }
 }
 .down-arrow{
-  margin:  0 0 20px 0;
-  height: 32px;
-  animation: animateDown 2s infinite;
+  margin: 0 0 20px 0;
+  height: 24px;
+  width: 14px;
+  animation: Section_animateDown__Q\+3yV 2s infinite;
 }
 @keyframes animateDown {
   0%,20%,50%,80%,100%{
