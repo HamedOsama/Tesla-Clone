@@ -12,11 +12,12 @@
   align-items: center;
   scroll-snap-align: start;
   -moz-scroll-snap-stop:always;
-  -webkit-scroll-snap-stop:always;
   scroll-snap-stop: always;
+  overflow-x: hidden;
 }
 .section .buttons{
   width: 100%;
+  transition: 1s;
 }
 .section .btn-group{
   margin: 0 0 106px 0;

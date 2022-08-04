@@ -3,7 +3,7 @@ import style from './SectionInfo.module.css'
 import { Fade } from "react-awesome-reveal";
 const SectionInfo = props => {
   return (
-    <div className={style['info-container']}>
+    <div ref={props.ref} className={style['info-container']}>
       <Fade direction='up' triggerOnce>
         <h1 className={style.header}>{props.title}</h1>
       </Fade>
