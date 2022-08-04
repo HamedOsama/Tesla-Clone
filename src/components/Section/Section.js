@@ -9,16 +9,16 @@ const Section = props => {
       <Fade bottom>
         <SectionInfo title={props.title} linkDes={props.linkDes}>{props.description}</SectionInfo>
       </Fade>
-      <div className="buttons">
+      <div className={style.buttons}>
         <div className={style['btn-group']}>
-          <Fade left>
+          <Fade className="hamed" left style={{ display: "inline" }}>
             <Button className={props.rightButton ? 'left' : ''}>{props.leftButton}</Button>
           </Fade>
-          <Fade right>
+          <Fade right style={{ display: "inline" }}>
             {props.rightButton && <Button className="right">{props.rightButton}</Button>}
           </Fade>
         </div>
-        <Fade top>
+        <Fade top >
           <div className="down">
             <img className={style['down-arrow']} src="./images/down-arrow.svg" alt="" />
           </div>

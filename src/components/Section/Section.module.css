@@ -11,9 +11,21 @@
   justify-content: space-between;
   align-items: center;
 }
+.section .buttons{
+  width: 100%;
+}
 .section .btn-group{
   margin: 0 0 30px 0;
   display: flex;
+  justify-content: center;
+}
+@media (max-width : 578px) {
+  .section .btn-group{
+    flex-direction: column;
+  }
+  .section .btn-group > * > *{
+    width: 90%;
+  }
 }
 .down-arrow{
   margin:  0 0 20px 0;
