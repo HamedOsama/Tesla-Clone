@@ -1,0 +1,23 @@
+.btn{
+  background-color: rgba(23, 26, 32, 1);
+  height: 40px;
+  width: 256px;
+  margin: 0.5rem;
+  color: white;
+  text-align: center;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  border: none;
+}
+.btn-left{
+  background-color: rgba(23, 26, 32, 0.8);
+}
+.btn-right{
+  background-color:rgba(244, 244, 244, 0.55) ;
+  color: inherit;
+}

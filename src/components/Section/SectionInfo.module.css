@@ -1,0 +1,20 @@
+.info-container{
+  padding: 15vh 0 0;
+  text-align: center;
+}
+.info-container .header{
+  font-size: 40px;
+  font-weight: 600 ;
+  margin: 0 0 0.5rem 0;
+  color: #171a20;
+}
+.info-container a{
+  position: relative;
+  text-decoration: none;
+  box-shadow: 0 1px 0 0 #171a20;
+  transition: 0.3s;
+}
+.info-container a:hover{
+  box-shadow: 0 1.5px 0 0 #171a20;
+  color: #171a20;
+}
