@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Button from '../UI/Button'
 import style from './Section.module.css'
 import SectionInfo from './SectionInfo'
@@ -11,7 +11,8 @@ const Section = props => {
   console.log(testing)
   return (
     <div className={style.section} style={{ backgroundImage: `url(./images/${props.backgroundImage})` }}>
-      <div ref={myRef} style={{ opacity: testing ? testing.intersectionRatio * 2 : 0, transform: `translateY(${testing ? 0 : testing.intersectionRatio * 50}px)` }}>
+      {/* <div ref={myRef} style={{ opacity: testing ? testing.intersectionRatio * 2 : 0, transform: `translateY(${testing ? testing.intersectionRatio * 50 : 0}px)` }}> */}
+      <div ref={myRef} style={{ opacity: testing ? testing.intersectionRatio * 1 : 0 }}>
         <SectionInfo title={props.title} linkDes={props.linkDes} animationDelay={delay}>{props.description}
         </SectionInfo>
       </div>
