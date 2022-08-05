@@ -2,11 +2,17 @@ import React from 'react'
 import CloseWrapper from '../UI/CloseWrapper'
 import style from './Sidebar.module.css'
 const SideBar = props => {
-  console.log(props.className)
+  const windowSize = window.innerWidth;
   return (
     <div className={`${style.container} ${style[props.className]}`}>
       <CloseWrapper onClick={props.closeSidebarHandler} />
       <ul className={style.sidebar}>
+        {windowSize < 1198 &&
+          props.products &&
+          props.products.map((el, i) => {
+            return <li key={i}><a href={`#${el}`}>{el}</a></li>
+          })
+        }
         <li><a href="#tesla">Existing Inventory</a></li>
         <li><a href="#tesla">Used Inventory</a></li>
         <li><a href="#tesla">Trade-In</a></li>
@@ -21,10 +27,6 @@ const SideBar = props => {
         <li><a href="#tesla">Investor Relations</a></li>
         <li><a href="#tesla">shop</a></li>
         <li><a href="#tesla">Account</a></li>
-        <li><a href="#tesla">More</a></li>
-        <li><a href="#tesla">More</a></li>
-        <li><a href="#tesla">More</a></li>
-        <li><a href="#tesla">More</a></li>
       </ul>
     </div>
   )
