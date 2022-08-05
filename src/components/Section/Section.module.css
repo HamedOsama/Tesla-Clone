@@ -17,22 +17,28 @@
 }
 .section .buttons{
   width: 100%;
-  transition: 1s;
+  transition: .5s;
 }
 .section .btn-group{
-  margin: 0 0 106px 0;
+  margin: 0 0 156px 0;
   display: flex;
   justify-content: center;
 }
 .section .btn-group.first__section{
-  margin: 0 0 50px 0;
+  margin: 0 0 100px 0;
+}
+.section .btnScrollIntersectionAnimation{
+  display : flex;
 }
 @media (max-width : 578px) {
-  .section .btn-group{
+  .section .btnScrollIntersectionAnimation{
     flex-direction: column;
   }
-  .section .btn-group > * > *{
+  .section .btn-group > * > * > *{
     width: 90%;
+  }
+  .section .btnScrollIntersectionAnimation{
+    width: 100%;
   }
 }
 .down-arrow{

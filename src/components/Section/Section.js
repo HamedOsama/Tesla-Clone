@@ -7,36 +7,34 @@ import { useInView } from 'react-intersection-observer'
 const Section = props => {
   const windowSize = window.innerWidth;
   const delay = props.first ? 1000 : '';
-  const { ref: myRef, inView: myElementIsVisible, entry: testing } = useInView({ trackVisibility: true, delay: 100, rootMargin: '550px', threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.5, 0.75, 0.8, 0.9, 1], })
-  console.log(testing)
+  const { ref: myRef, inView: myElementIsVisible, entry: sectionEntry } = useInView({ root: null, rootMargin: '0px', threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.5, 0.75, 0.9, 1], })
   return (
     <div className={style.section} style={{ backgroundImage: `url(./images/${props.backgroundImage})` }}>
-      {/* <div ref={myRef} style={{ opacity: testing ? testing.intersectionRatio * 2 : 0, transform: `translateY(${testing ? testing.intersectionRatio * 50 : 0}px)` }}> */}
-      <div ref={myRef} style={{ opacity: testing ? testing.intersectionRatio * 1 : 0 }}>
+      <div style={{ opacity: sectionEntry ? sectionEntry.intersectionRatio * 5 : 0, transform: `translateY(${sectionEntry ? sectionEntry.intersectionRatio * 30 : 0}px)` }}>
         <SectionInfo title={props.title} linkDes={props.linkDes} animationDelay={delay}>{props.description}
         </SectionInfo>
       </div>
-
-      <div className={style.buttons} ref={myRef} style={{ opacity: testing ? testing.intersectionRatio : 0 }}>
-
+      <div className={style.buttons} >
         <div className={`${style['btn-group']} ${props.first ? style.first__section : ''}`}>
-          <Fade direction={windowSize > 578 && props.rightButton ? 'left' : 'up'} delay={delay} triggerOnce>
-            <Button className={props.rightButton ? 'left' : ''}>{props.leftButton}</Button>
-          </Fade>
-          {props.rightButton &&
-            <Fade direction={windowSize > 578 ? 'right' : 'up'} delay={delay} triggerOnce>
-              <Button className="right">{props.rightButton}</Button>
-            </Fade>}
+          <div ref={myRef} className={style.btnScrollIntersectionAnimation} style={{ opacity: sectionEntry ? sectionEntry.intersectionRatio : 0, transform: `translateY(${sectionEntry ? sectionEntry.intersectionRatio * 50 : 0}px)` }}>
+            <Fade direction={windowSize > 578 && props.rightButton ? 'left' : 'up'} delay={delay} >
+              <Button className={props.rightButton ? 'left' : ''}>{props.leftButton}</Button>
+            </Fade>
+            {props.rightButton &&
+              <Fade direction={windowSize > 578 ? 'right' : 'up'} delay={delay} >
+                <Button className="right">{props.rightButton}</Button>
+              </Fade>}
+          </div>
         </div>
         {props.first &&
-          <Fade direction="down" delay={delay} triggerOnce	>
+          <Fade direction="down" delay={delay} 	>
             <div className="down">
               <img className={style['down-arrow']} src="./images/down-arrow-2.svg" alt="" />
             </div>
           </Fade>
         }
       </div>
-    </div>
+    </div >
   )
 }
 
