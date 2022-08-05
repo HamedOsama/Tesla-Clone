@@ -1,7 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { carReducer } from '../features/car/carSlice'
+import { productReducer } from '../features/product/productSlice'
+import { optionReducer } from '../features/option/optionSlice';
 export const store = configureStore({
   reducer: {
-    counter: carReducer,
+    product: productReducer,
+    option: optionReducer
   },
 });

@@ -7,6 +7,13 @@
   .menu.middle__menu {
     display: none;
   }
+  .menu.right__menu .options{
+    display: none;
+  }
+  .menu.right__menu .open__menu{
+    display: block;
+    background-color:hsla(0,0%,0%,.05);
+  }
 }
 
 .menu li {
