@@ -7,7 +7,8 @@ import { useInView } from 'react-intersection-observer'
 const Section = props => {
   const windowSize = window.innerWidth;
   const delay = props.first ? 1000 : '';
-  const { ref: myRef, inView: myElementIsVisible, entry: sectionEntry } = useInView({ root: null, rootMargin: '0px', threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.5, 0.75, 0.9, 1], })
+  // eslint-disable-next-line no-unused-vars
+  const { ref: myRef, _, entry: sectionEntry } = useInView({ root: null, rootMargin: '0px', threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.5, 0.75, 0.9, 1], })
   return (
     <div className={style.section} style={{ backgroundImage: `url(./images/${props.backgroundImage})` }}>
       <div style={{ opacity: sectionEntry ? sectionEntry.intersectionRatio * 5 : 0, transform: `translateY(${sectionEntry ? sectionEntry.intersectionRatio * 30 : 0}px)` }}>
@@ -18,11 +19,11 @@ const Section = props => {
         <div className={`${style['btn-group']} ${props.first ? style.first__section : ''}`}>
           <div ref={myRef} className={style.btnScrollIntersectionAnimation} style={{ opacity: sectionEntry ? sectionEntry.intersectionRatio : 0, transform: `translateY(${sectionEntry ? sectionEntry.intersectionRatio * 50 : 0}px)` }}>
             <Fade direction={windowSize > 578 && props.rightButton ? 'left' : 'up'} delay={delay} >
-              <Button className={props.rightButton ? 'left' : ''}>{props.leftButton}</Button>
+              <Button className={props.rightButton ? 'btn-left' : ''}>{props.leftButton}</Button>
             </Fade>
             {props.rightButton &&
               <Fade direction={windowSize > 578 ? 'right' : 'up'} delay={delay} >
-                <Button className="right">{props.rightButton}</Button>
+                <Button className="btn-right">{props.rightButton}</Button>
               </Fade>}
           </div>
         </div>
