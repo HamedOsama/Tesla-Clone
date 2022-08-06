@@ -45,7 +45,7 @@
   margin: 0 0 20px 0;
   height: 24px;
   width: 14px;
-  animation: Section_animateDown__Q\+3yV 2s infinite;
+  animation: animateDown 2s infinite;
 }
 @keyframes animateDown {
   0%,20%,50%,80%,100%{
