@@ -20,7 +20,6 @@ const Navbar = () => {
     <div className={style.navbar}>
       <div className={style.logo}>
         <img src={logo} alt="logo" />
-        {/* <img src='./images/logo.svg' alt="logo" /> */}
       </div>
       <MenuItems products={products} />
       <RightMenu options={options} openSidebarHandler={openSidebarHandler} />

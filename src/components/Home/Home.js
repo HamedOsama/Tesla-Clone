@@ -1,11 +1,9 @@
 import React from 'react'
 import Section from '../Section/Section'
-// import SideBar from '../SideBar/SideBar'
 import style from './Home.module.css'
 function Home() {
   return (
     <div className={style.container}>
-      {/* <SideBar /> */}
       <Section title="Model 3"
         description="Order online for "
         backgroundImage="model-3.jpg"

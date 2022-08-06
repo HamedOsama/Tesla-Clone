@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 const SectionInfo = props => {
   return (
     <div ref={props.ref} className={style['info-container']}>
-      <Fade direction='up' >
+      <Fade direction='up' delay={props.headDelay}>
         <h1 className={style.header}>{props.title}</h1>
       </Fade>
       <Fade direction='up' delay={props.animationDelay} >
