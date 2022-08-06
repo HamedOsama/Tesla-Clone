@@ -1,5 +1,5 @@
 # Tesla-Clone
-Tesla Clone With React JS
+
 ![Demo](./public/images/demo.png)
 
 ## Description
