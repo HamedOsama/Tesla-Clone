@@ -14,8 +14,6 @@ const Navbar = () => {
   const closeSidebarHandler = () => setSidebar(false);
   const products = useSelector(selectProducts);
   const options = useSelector(selectOptions);
-  console.log(products)
-  console.log(options)
   return (
     <div className={style.navbar}>
       <div className={style.logo}>

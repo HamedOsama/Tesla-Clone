@@ -3,7 +3,6 @@ import CloseWrapper from '../UI/CloseWrapper'
 import style from './Sidebar.module.css'
 const SideBar = props => {
   const windowSize = window.innerWidth;
-  console.log(windowSize);
   return (
     <div className={`${style.container} ${style[props.className]}`}>
       <CloseWrapper onClick={props.closeSidebarHandler} />
